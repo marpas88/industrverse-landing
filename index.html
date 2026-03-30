@@ -45,18 +45,27 @@
     <span class="nav-wordmark">INDUSTR<span>VERSE</span></span>
   </a>
 
-  <ul role="navigation" aria-label="Menu główne">
-    <li><a href="#accounts">Konta</a></li>
-    <li><a href="#how">Jak działa</a></li>
-    <li><a href="#results">Wyniki</a></li>
-    <li><a href="https://industrverse.com/login" class="nav-login">Zaloguj się</a></li>
-    <li>
-      <a href="https://industrverse.com/register" class="btn btn-green btn-sm">
+  <div class="nav-right">
+    <ul role="navigation" aria-label="Menu główne" class="nav-links">
+      <li><a href="#accounts" data-i18n="nav_accounts">Konta</a></li>
+      <li><a href="#how" data-i18n="nav_how">Jak działa</a></li>
+      <li><a href="#results" data-i18n="nav_results">Wyniki</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <!-- Lang toggle -->
+      <div class="lang-toggle" role="group" aria-label="Język">
+        <button class="lang-btn active" data-lang="pl">PL</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+
+      <a href="https://app.industrverse.com/login" class="nav-login" data-i18n="nav_login">Zaloguj się</a>
+      <a href="https://app.industrverse.com/register" class="btn btn-green btn-sm">
         <span class="material-icons">rocket_launch</span>
-        Zacznij za darmo
+        <span data-i18n="nav_register">Zarejestruj</span>
       </a>
-    </li>
-  </ul>
+    </div>
+  </div>
 </nav>
 
 

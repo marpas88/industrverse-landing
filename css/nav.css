@@ -38,8 +38,15 @@ nav {
 }
 .nav-wordmark span { color: var(--green); }
 
+/* Right side wrapper */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 /* Links */
-nav ul {
+.nav-links {
   list-style: none;
   display: flex;
   gap: 4px;
@@ -63,7 +70,51 @@ nav a:hover { color: var(--text); background: var(--bg); }
   font-weight: 600 !important;
 }
 
+/* Actions group: lang + login + register */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 8px;
+}
+
+/* Language toggle */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2px;
+  gap: 2px;
+  margin-right: 4px;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: inherit;
+  color: var(--text-3);
+  padding: 4px 10px;
+  border-radius: 16px;
+  transition: background 0.15s, color 0.15s;
+  line-height: 1;
+}
+
+.lang-btn.active {
+  background: var(--white);
+  color: var(--text);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+
+.lang-btn:hover:not(.active) {
+  color: var(--text);
+}
+
 @media (max-width: 960px) {
   nav { padding: 0 var(--sp-4); }
-  nav ul { display: none; }
+  .nav-links { display: none; }
 }
