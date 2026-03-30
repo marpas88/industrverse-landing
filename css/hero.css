@@ -1,0 +1,196 @@
+/* ============================================================
+   HERO + PERSONA SWITCHER
+   ============================================================ */
+
+#hero {
+  padding: 100px var(--sp-6) 72px;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+/* ── LEFT COL ── */
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--green-light);
+  color: var(--green-dark);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: var(--sp-6);
+}
+.hero-eyebrow .material-icons { font-size: 14px; }
+
+.hero-h {
+  font-size: clamp(36px, 4.2vw, 56px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: var(--sp-5);
+}
+.hero-h .g { color: var(--green); }
+.hero-h .b { display: block; }
+
+.hero-sub {
+  font-size: var(--font-size-lg);
+  color: var(--text-2);
+  line-height: 1.72;
+  font-weight: 400;
+  margin-bottom: var(--sp-8);
+  max-width: 480px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+  margin-bottom: var(--sp-8);
+}
+
+.hero-trust {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--font-size-sm);
+  color: var(--text-3);
+}
+.trust-faces { display: flex; }
+.tf {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+  margin-left: -8px;
+  background: var(--green-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+.tf:first-child { margin-left: 0; }
+.trust-txt strong { color: var(--text-2); }
+
+/* ── PERSONA SWITCHER CARD ── */
+.ps-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+/* Tabs */
+.ps-tabs {
+  display: flex;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.ps-tabs::-webkit-scrollbar { display: none; }
+
+.ps-tab {
+  flex: 1;
+  min-width: 80px;
+  padding: var(--sp-3) var(--sp-2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  font-family: var(--font);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--text-3);
+  background: transparent;
+  border: none;
+  border-right: 1px solid var(--border);
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: color 0.18s, background 0.18s, border-color 0.18s;
+}
+.ps-tab:last-child { border-right: none; }
+.ps-tab .material-icons { font-size: 20px; color: var(--text-3); transition: color 0.18s; }
+.ps-tab:hover { color: var(--text); background: var(--white); }
+.ps-tab:hover .material-icons { color: var(--green); }
+.ps-tab.active {
+  color: var(--green-dark);
+  background: var(--white);
+  border-bottom-color: var(--green);
+  margin-bottom: -1px;
+}
+.ps-tab.active .material-icons { color: var(--green); }
+
+/* Panels */
+.ps-panel { display: none; padding: var(--sp-6) var(--sp-6) var(--sp-6); }
+.ps-panel.active { display: block; }
+
+.ps-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--green-light);
+  color: var(--green-dark);
+  border-radius: 100px;
+  padding: 3px 10px;
+  margin-bottom: var(--sp-3);
+}
+.ps-label .material-icons { font-size: 13px; }
+
+.ps-panel h3 {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+.ps-panel h3 .g { color: var(--green); }
+.ps-panel > p {
+  font-size: var(--font-size-md);
+  color: var(--text-3);
+  line-height: 1.65;
+  margin-bottom: var(--sp-5);
+}
+
+.ps-feats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-5);
+}
+.ps-feat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--font-size-sm);
+  color: var(--text-2);
+}
+.ps-feat .material-icons { font-size: 16px; color: var(--green); flex-shrink: 0; }
+
+.ps-btns { display: flex; gap: 10px; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: var(--sp-10);
+  }
+}
