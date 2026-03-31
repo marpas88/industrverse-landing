@@ -11,12 +11,12 @@ nav {
   border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 var(--sp-8);
+  padding: 0 32px;
+  gap: 0;
   box-shadow: var(--shadow-sm);
 }
 
-/* Logo */
+/* ── Logo ── */
 .nav-logo {
   display: flex;
   align-items: center;
@@ -24,58 +24,56 @@ nav {
   text-decoration: none;
   color: var(--text);
   flex-shrink: 0;
+  margin-right: 32px;
 }
 
-.logo-mark { width: 40px; height: 40px; flex-shrink: 0; }
+.logo-mark { width: 36px; height: 36px; flex-shrink: 0; }
 .logo-mark svg { width: 100%; height: 100%; }
 
 .nav-wordmark {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--text);
 }
 .nav-wordmark span { color: var(--green); }
 
-/* Right side wrapper */
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-/* Links */
+/* ── Center links ── */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 4px;
   align-items: center;
+  gap: 2px;
+  flex: 1;
 }
 
-nav a {
+.nav-links a {
   color: var(--text-3);
   text-decoration: none;
-  font-size: var(--font-size-md);
+  font-size: 14px;
   font-weight: 500;
-  padding: 8px 14px;
+  padding: 7px 14px;
   border-radius: var(--r-sm);
-  transition: color 0.18s, background 0.18s;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
 }
-nav a:hover { color: var(--text); background: var(--bg); }
+.nav-links a:hover { color: var(--text); background: var(--bg); }
 
-/* Login link */
-.nav-login {
-  color: var(--text-2) !important;
-  font-weight: 600 !important;
-}
-
-/* Actions group: lang + login + register */
+/* ── Right actions ── */
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 4px;
-  margin-left: 8px;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* Divider */
+.nav-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--border);
+  margin: 0 4px;
 }
 
 /* Language toggle */
@@ -86,35 +84,62 @@ nav a:hover { color: var(--text); background: var(--bg); }
   border: 1px solid var(--border);
   border-radius: 20px;
   padding: 2px;
-  gap: 2px;
-  margin-right: 4px;
 }
 
 .lang-btn {
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 11px;
+  font-weight: 700;
   font-family: inherit;
+  letter-spacing: 0.04em;
   color: var(--text-3);
-  padding: 4px 10px;
+  padding: 4px 9px;
   border-radius: 16px;
   transition: background 0.15s, color 0.15s;
   line-height: 1;
 }
-
 .lang-btn.active {
   background: var(--white);
   color: var(--text);
   box-shadow: 0 1px 3px rgba(0,0,0,0.12);
 }
+.lang-btn:hover:not(.active) { color: var(--text); }
 
-.lang-btn:hover:not(.active) {
-  color: var(--text);
+/* Login link */
+.nav-login {
+  color: var(--text-2) !important;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 7px 14px;
+  border-radius: var(--r-sm);
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+}
+.nav-login:hover { color: var(--text) !important; background: var(--bg); }
+
+/* Register button — override .btn for nav */
+.nav-actions .btn-green.btn-sm {
+  font-size: 13px;
+  padding: 8px 16px;
+  gap: 6px;
+  white-space: nowrap;
+}
+.nav-actions .btn-green.btn-sm .material-icons {
+  font-size: 15px;
 }
 
-@media (max-width: 960px) {
-  nav { padding: 0 var(--sp-4); }
+/* ── Mobile ── */
+@media (max-width: 900px) {
+  nav { padding: 0 20px; }
+  .nav-logo { margin-right: 0; }
   .nav-links { display: none; }
+  .nav-divider { display: none; }
+  .nav-actions { gap: 6px; }
+}
+
+@media (max-width: 480px) {
+  .nav-login { display: none; }
 }
