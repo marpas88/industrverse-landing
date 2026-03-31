@@ -32,6 +32,7 @@
   <link rel="stylesheet" href="css/hero.css">
   <link rel="stylesheet" href="css/sections.css">
   <link rel="stylesheet" href="css/cta.css">
+  <link rel="stylesheet" href="css/cookies.css">
 </head>
 <body>
 
@@ -668,11 +669,72 @@
     <a href="/polityka-prywatnosci" data-i18n="footer_privacy">Polityka prywatności</a>
     <a href="/regulamin" data-i18n="footer_terms">Regulamin</a>
     <a href="mailto:contact@industrverse.com" data-i18n="footer_contact">Kontakt</a>
+    <button id="cookie-manage" class="cookie-manage-btn" data-i18n="footer_cookies">Cookies</button>
   </div>
 </footer>
 
 <!-- Visually hidden utility -->
 <style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<!-- ── Cookie banner ── -->
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Powiadomienie o cookies" hidden>
+  <div class="cookie-banner-inner">
+    <div class="cookie-banner-text">
+      <p data-i18n="cookie_banner_text">Używamy cookies do analizy ruchu i poprawy działania strony. <a href="/polityka-prywatnosci#cookies" class="cookie-link" data-i18n="cookie_banner_link">Dowiedz się więcej</a></p>
+    </div>
+    <div class="cookie-banner-actions">
+      <button id="cookie-decline"  class="cookie-btn cookie-btn-ghost"   data-i18n="cookie_decline">Odrzuć</button>
+      <button id="cookie-settings" class="cookie-btn cookie-btn-outline" data-i18n="cookie_settings">Ustawienia</button>
+      <button id="cookie-accept"   class="cookie-btn cookie-btn-primary" data-i18n="cookie_accept">Akceptuj wszystkie</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Cookie modal ── -->
+<div id="cookie-modal" class="cookie-modal" role="dialog" aria-modal="true" aria-label="Ustawienia cookies" hidden>
+  <div class="cookie-modal-backdrop"></div>
+  <div class="cookie-modal-dialog">
+    <div class="cookie-modal-header">
+      <span class="cookie-modal-title" data-i18n="cookie_modal_title">Ustawienia cookies</span>
+      <button id="cookie-modal-close" class="cookie-modal-close" aria-label="Zamknij">✕</button>
+    </div>
+    <div class="cookie-modal-body">
+      <p class="cookie-modal-intro" data-i18n="cookie_modal_intro">Wybierz, które cookies akceptujesz. Cookies niezbędne zawsze są aktywne. <a href="/polityka-prywatnosci#cookies" class="cookie-link" data-i18n="cookie_modal_link">Polityka prywatności</a></p>
+
+      <div class="cookie-category">
+        <div class="cookie-category-header">
+          <div class="cookie-category-meta">
+            <span class="cookie-category-name" data-i18n="cookie_necessary">Niezbędne</span>
+            <span class="cookie-category-badge" data-i18n="cookie_always_on">Zawsze aktywne</span>
+          </div>
+          <div class="cookie-toggle cookie-toggle--disabled" role="switch" aria-checked="true" aria-disabled="true">
+            <span class="cookie-toggle-track"></span>
+            <span class="cookie-toggle-thumb"></span>
+          </div>
+        </div>
+        <p class="cookie-category-desc" data-i18n="cookie_necessary_desc">Wymagane do działania strony: sesja, bezpieczeństwo, preferencje języka.</p>
+      </div>
+
+      <div class="cookie-category">
+        <div class="cookie-category-header">
+          <div class="cookie-category-meta">
+            <span class="cookie-category-name" data-i18n="cookie_analytics">Analityczne</span>
+          </div>
+          <label class="cookie-toggle">
+            <input type="checkbox" id="consent-analytics" class="cookie-toggle-input">
+            <span class="cookie-toggle-track"></span>
+            <span class="cookie-toggle-thumb"></span>
+          </label>
+        </div>
+        <p class="cookie-category-desc" data-i18n="cookie_analytics_desc">Pomagają nam zrozumieć, jak odwiedzasz stronę (Vercel Analytics). Dane są anonimowe.</p>
+      </div>
+    </div>
+    <div class="cookie-modal-footer">
+      <button id="cookie-save"       class="cookie-btn cookie-btn-primary" data-i18n="cookie_save">Zapisz ustawienia</button>
+      <button id="cookie-accept-all" class="cookie-btn cookie-btn-ghost"   data-i18n="cookie_accept_all_modal">Akceptuj wszystkie</button>
+    </div>
+  </div>
+</div>
 
 <!-- Scripts -->
 <script src="js/main.js"></script>
