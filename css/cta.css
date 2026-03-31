@@ -118,17 +118,15 @@ footer {
 .f-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  text-decoration: none;
 }
-.f-wordmark {
-  font-size: var(--font-size-md);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
+.f-logo-img {
+  height: 32px;
+  width: auto;
+  display: block;
 }
-.f-wordmark span { color: var(--green); }
 
-footer > p { font-size: var(--font-size-sm); color: var(--text-3); }
+.f-copy { font-size: var(--font-size-sm); color: var(--text-3); }
 
 .f-links { display: flex; gap: var(--sp-5); }
 .f-links a {

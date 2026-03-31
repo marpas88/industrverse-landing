@@ -17,6 +17,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="shortcut icon" href="img/favicon.svg">
+
   <!-- Material Icons (MUI) -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -34,21 +38,15 @@
      NAVIGATION
 ══════════════════════════════════════════════════════════ -->
 <nav>
-  <a href="#" class="nav-logo">
-    <div class="logo-mark">
-      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <rect width="6" height="28" x="4" y="6" fill="#1a1a1a" rx="1"/>
-        <path d="M10 6 L22 20 L10 34" stroke="#4caf50" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-        <path d="M22 6 L34 34" stroke="#4caf50" stroke-width="6" stroke-linecap="round" fill="none"/>
-      </svg>
-    </div>
-    <span class="nav-wordmark">INDUSTR<span>VERSE</span></span>
+  <a href="/" class="nav-logo">
+    <img src="img/logo.png" alt="Industrverse" class="nav-logo-img">
   </a>
 
   <ul role="navigation" aria-label="Menu główne" class="nav-links">
     <li><a href="#accounts" data-i18n="nav_accounts">Konta</a></li>
     <li><a href="#how" data-i18n="nav_how">Jak działa</a></li>
     <li><a href="#results" data-i18n="nav_results">Wyniki</a></li>
+    <li><a href="mailto:contact@industrverse.com" data-i18n="nav_contact">Kontakt</a></li>
   </ul>
 
   <div class="nav-actions">
@@ -662,23 +660,16 @@
      FOOTER
 ══════════════════════════════════════════════════════════ -->
 <footer role="contentinfo">
-  <div class="f-logo">
-    <div class="logo-mark" style="width:32px;height:32px">
-      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <rect width="6" height="28" x="4" y="6" fill="#1a1a1a" rx="1"/>
-        <path d="M10 6 L22 20 L10 34" stroke="#4caf50" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-        <path d="M22 6 L34 34" stroke="#4caf50" stroke-width="6" stroke-linecap="round" fill="none"/>
-      </svg>
-    </div>
-    <span class="f-wordmark">INDUSTR<span>VERSE</span></span>
-  </div>
+  <a href="/" class="f-logo">
+    <img src="img/logo.png" alt="Industrverse" class="f-logo-img">
+  </a>
 
-  <p>© 2026 Industrverse. Wszelkie prawa zastrzeżone.</p>
+  <p class="f-copy">© 2026 Industrverse · Coact Sp. z o.o.</p>
 
   <nav class="f-links" aria-label="Linki stopki">
-    <a href="/polityka-prywatnosci">Polityka prywatności</a>
-    <a href="/regulamin">Regulamin</a>
-    <a href="mailto:contact@industrverse.com">Kontakt</a>
+    <a href="/polityka-prywatnosci" data-i18n="footer_privacy">Polityka prywatności</a>
+    <a href="/regulamin" data-i18n="footer_terms">Regulamin</a>
+    <a href="mailto:contact@industrverse.com" data-i18n="footer_contact">Kontakt</a>
   </nav>
 </footer>
 
