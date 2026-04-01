@@ -21,6 +21,7 @@
   ],
   "rewrites": [
     { "source": "/polityka-prywatnosci", "destination": "/polityka-prywatnosci.html" },
+    { "source": "/polityka-cookies", "destination": "/polityka-cookies.html" },
     { "source": "/regulamin", "destination": "/regulamin.html" }
   ]
 }

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polityka cookies — Industrverse</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="shortcut icon" href="img/favicon.svg">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/cta.css">
+  <link rel="stylesheet" href="css/cookies.css">
+
+  <style>
+    .legal-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 100px 24px 80px;
+    }
+    .legal-wrap h1 {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+    .legal-wrap .legal-date {
+      font-size: 13px;
+      color: var(--text-3);
+      margin-bottom: 48px;
+    }
+    .legal-wrap h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+      margin: 36px 0 12px;
+    }
+    .legal-wrap h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      margin: 24px 0 8px;
+    }
+    .legal-wrap p, .legal-wrap li {
+      font-size: 15px;
+      color: var(--text-2);
+      line-height: 1.75;
+    }
+    .legal-wrap ul {
+      padding-left: 20px;
+      margin: 8px 0 16px;
+    }
+    .legal-wrap li { margin-bottom: 6px; }
+    .legal-wrap a { color: var(--green); text-decoration: underline; }
+
+    .policy-table-wrap {
+      overflow-x: auto;
+      margin: 12px 0 24px;
+      border-radius: 8px;
+      border: 1px solid var(--border, rgba(255,255,255,0.08));
+    }
+    .policy-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .policy-table th {
+      background: rgba(255,255,255,0.04);
+      color: var(--text-3);
+      font-weight: 600;
+      text-align: left;
+      padding: 10px 14px;
+      white-space: nowrap;
+      border-bottom: 1px solid var(--border, rgba(255,255,255,0.08));
+    }
+    .policy-table td {
+      padding: 10px 14px;
+      color: var(--text-2);
+      border-bottom: 1px solid var(--border, rgba(255,255,255,0.05));
+      vertical-align: top;
+    }
+    .policy-table tr:last-child td { border-bottom: none; }
+    .policy-table code {
+      background: rgba(255,255,255,0.06);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-family: monospace;
+    }
+
+    .btn-open-cookies {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 4px 0 20px;
+      padding: 10px 20px;
+      background: var(--green);
+      color: #000;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn-open-cookies:hover { opacity: 0.9; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <img src="img/logo.png" alt="Industrverse" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="/#accounts">Konta</a></li>
+    <li><a href="/#how">Jak działa</a></li>
+    <li><a href="/#results">Wyniki</a></li>
+    <li><a href="mailto:contact@industrverse.com">Kontakt</a></li>
+  </ul>
+  <div class="nav-actions">
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="window.location.href='/polityka-cookies'">PL</button>
+      <button class="lang-btn" onclick="window.location.href='/cookie-policy'">EN</button>
+    </div>
+    <div class="nav-divider"></div>
+    <a href="https://app.industrverse.com/login" class="nav-login">Zaloguj się</a>
+    <a href="https://app.industrverse.com/register" class="btn btn-green btn-sm">
+      <span class="material-icons">rocket_launch</span>
+      Zarejestruj
+    </a>
+  </div>
+</div>
+
+<div class="legal-wrap">
+  <h1>Polityka cookies</h1>
+  <p class="legal-date">Obowiązuje od: 1 kwietnia 2026 r. · Coact Sp. z o.o.</p>
+
+  <h2>1. Czym są pliki cookie?</h2>
+  <p>Pliki cookie (ciasteczka) to małe pliki tekstowe zapisywane przez przeglądarkę na Twoim urządzeniu podczas odwiedzania stron internetowych. Mogą być odczytywane przez serwer lub skrypty strony przy kolejnych wizytach.</p>
+  <p>Ta strona korzysta również z <strong>localStorage</strong> — mechanizmu pamięci lokalnej przeglądarki, który działa podobnie do cookies, ale dane przechowywane są wyłącznie po stronie klienta i nie są automatycznie wysyłane na serwer.</p>
+
+  <h2>2. Jakich cookies używamy</h2>
+
+  <h3>Niezbędne</h3>
+  <p>Wymagane do prawidłowego działania strony. Nie można ich wyłączyć, ponieważ bez nich strona nie funkcjonuje poprawnie.</p>
+
+  <div class="policy-table-wrap">
+    <table class="policy-table">
+      <thead>
+        <tr>
+          <th>Nazwa</th>
+          <th>Rodzaj</th>
+          <th>Dostawca</th>
+          <th>Cel</th>
+          <th>Wygaśnięcie</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>cookie-consent-v2</code></td>
+          <td>localStorage</td>
+          <td>industrverse.com</td>
+          <td>Zapamiętuje Twoje preferencje dotyczące plików cookie</td>
+          <td>Do wyczyszczenia danych przeglądarki</td>
+        </tr>
+        <tr>
+          <td><code>iv_lang</code></td>
+          <td>localStorage</td>
+          <td>industrverse.com</td>
+          <td>Zapamiętuje wybrany język interfejsu (PL/EN)</td>
+          <td>Do wyczyszczenia danych przeglądarki</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Analityczne</h3>
+  <p>Pomagają zrozumieć, w jaki sposób odwiedzający korzystają ze strony. Zbierane informacje są anonimowe i nie pozwalają na identyfikację konkretnej osoby.</p>
+
+  <div class="policy-table-wrap">
+    <table class="policy-table">
+      <thead>
+        <tr>
+          <th>Nazwa</th>
+          <th>Rodzaj</th>
+          <th>Dostawca</th>
+          <th>Cel</th>
+          <th>Wygaśnięcie</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Vercel Web Analytics</td>
+          <td>Skrypt (bezplikowy)</td>
+          <td>Vercel Inc.</td>
+          <td>Anonimowe śledzenie odsłon stron. Nie przechowuje danych osobowych ani plików cookie. Dane agregowane.</td>
+          <td>Sesja (brak trwałego przechowywania)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Marketingowe</h3>
+  <p>Ta strona aktualnie nie wykorzystuje żadnych narzędzi marketingowych ani reklamowych.</p>
+
+  <div class="policy-table-wrap">
+    <table class="policy-table">
+      <thead>
+        <tr>
+          <th>Nazwa</th>
+          <th>Rodzaj</th>
+          <th>Dostawca</th>
+          <th>Cel</th>
+          <th>Wygaśnięcie</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="5" style="color: var(--text-3); font-style: italic; text-align: center; padding: 16px;">Aktualnie brak — narzędzia marketingowe nie są wdrożone.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Usługi zewnętrzne</h3>
+  <p>Strona korzysta z poniższych zewnętrznych usług, które mogą ustawiać własne pliki cookie:</p>
+
+  <div class="policy-table-wrap">
+    <table class="policy-table">
+      <thead>
+        <tr>
+          <th>Usługa</th>
+          <th>Cel</th>
+          <th>Polityka prywatności</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Vercel</td>
+          <td>Hosting i dostarczanie strony</td>
+          <td><a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">vercel.com/legal/privacy-policy</a></td>
+        </tr>
+        <tr>
+          <td>Google Fonts</td>
+          <td>Czcionki internetowe</td>
+          <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>3. Jak zarządzać swoimi preferencjami</h2>
+  <p>Swoje preferencje dotyczące plików cookie możesz zmienić w dowolnym momencie:</p>
+  <ul>
+    <li>Klikając przycisk <strong>„Zarządzaj cookies"</strong> w stopce strony</li>
+    <li>Używając przycisku poniżej</li>
+  </ul>
+
+  <button id="open-cookie-settings" class="btn-open-cookies">
+    <span class="material-icons" style="font-size:18px">tune</span>
+    Otwórz ustawienia cookies
+  </button>
+
+  <h2>4. Zarządzanie cookies w przeglądarce</h2>
+  <p>Możesz również zarządzać plikami cookie bezpośrednio w ustawieniach swojej przeglądarki. Pamiętaj jednak, że blokowanie wszystkich plików cookie może wpłynąć na działanie niektórych stron internetowych.</p>
+  <ul>
+    <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome</a></li>
+    <li><a href="https://support.mozilla.org/pl/kb/wzmocniona-ochrona-przed-sledzeniem" target="_blank" rel="noopener">Mozilla Firefox</a></li>
+    <li><a href="https://support.apple.com/pl-pl/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Safari</a></li>
+    <li><a href="https://support.microsoft.com/pl-pl/microsoft-edge/usuwanie-plik%C3%B3w-cookie-w-przegl%C4%85darce-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener">Microsoft Edge</a></li>
+  </ul>
+
+  <h2>5. Zmiany polityki</h2>
+  <p>Polityka cookies może być aktualizowana. O istotnych zmianach poinformujemy, aktualizując datę powyżej.</p>
+  <p>Więcej informacji o przetwarzaniu danych osobowych znajdziesz w <a href="/polityka-prywatnosci">Polityce prywatności</a>.</p>
+</div>
+
+<footer role="contentinfo">
+  <a href="/" class="f-logo">
+    <img src="img/logo.png" alt="Industrverse" class="f-logo-img">
+  </a>
+  <p class="f-copy">© 2026 Industrverse · Coact Sp. z o.o.</p>
+  <div class="f-links">
+    <a href="/polityka-prywatnosci">Polityka prywatności</a>
+    <a href="/polityka-cookies">Polityka cookies</a>
+    <a href="/regulamin">Regulamin</a>
+    <a href="mailto:contact@industrverse.com">Kontakt</a>
+    <button id="cookie-manage" class="cookie-manage-btn">Zarządzaj cookies</button>
+  </div>
+</footer>
+
+<!-- ── Cookie banner ── -->
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Powiadomienie o cookies" hidden>
+  <div class="cookie-banner-inner">
+    <div class="cookie-banner-text">
+      <p>Używamy cookies do analizy ruchu i poprawy działania strony. <a href="/polityka-cookies" class="cookie-link">Dowiedz się więcej</a></p>
+    </div>
+    <div class="cookie-banner-actions">
+      <button id="cookie-decline"  class="cookie-btn cookie-btn-ghost">Odrzuć</button>
+      <button id="cookie-settings" class="cookie-btn cookie-btn-outline">Ustawienia</button>
+      <button id="cookie-accept"   class="cookie-btn cookie-btn-primary">Akceptuj wszystkie</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Cookie modal ── -->
+<div id="cookie-modal" class="cookie-modal" role="dialog" aria-modal="true" aria-label="Ustawienia cookies" hidden>
+  <div class="cookie-modal-backdrop"></div>
+  <div class="cookie-modal-dialog">
+    <div class="cookie-modal-header">
+      <span class="cookie-modal-title">Ustawienia cookies</span>
+      <button id="cookie-modal-close" class="cookie-modal-close" aria-label="Zamknij">✕</button>
+    </div>
+    <div class="cookie-modal-body">
+      <p class="cookie-modal-intro">Wybierz, które cookies akceptujesz. Cookies niezbędne zawsze są aktywne. <a href="/polityka-cookies" class="cookie-link">Polityka cookies</a></p>
+
+      <div class="cookie-category">
+        <div class="cookie-category-header">
+          <div class="cookie-category-meta">
+            <span class="cookie-category-name">Niezbędne</span>
+            <span class="cookie-category-badge">Zawsze aktywne</span>
+          </div>
+          <div class="cookie-toggle cookie-toggle--disabled" role="switch" aria-checked="true" aria-disabled="true">
+            <span class="cookie-toggle-track"></span>
+            <span class="cookie-toggle-thumb"></span>
+          </div>
+        </div>
+        <p class="cookie-category-desc">Wymagane do działania strony: sesja, bezpieczeństwo, preferencje języka.</p>
+      </div>
+
+      <div class="cookie-category">
+        <div class="cookie-category-header">
+          <div class="cookie-category-meta">
+            <span class="cookie-category-name">Analityczne</span>
+          </div>
+          <label class="cookie-toggle">
+            <input type="checkbox" id="consent-analytics" class="cookie-toggle-input">
+            <span class="cookie-toggle-track"></span>
+            <span class="cookie-toggle-thumb"></span>
+          </label>
+        </div>
+        <p class="cookie-category-desc">Pomagają nam zrozumieć, jak odwiedzasz stronę (Vercel Analytics). Dane są anonimowe.</p>
+      </div>
+    </div>
+    <div class="cookie-modal-footer">
+      <button id="cookie-save"       class="cookie-btn cookie-btn-primary">Zapisz ustawienia</button>
+      <button id="cookie-accept-all" class="cookie-btn cookie-btn-ghost">Akceptuj wszystkie</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+  document.getElementById('open-cookie-settings')?.addEventListener('click', () => {
+    const btn = document.getElementById('cookie-manage');
+    if (btn) btn.click();
+  });
+</script>
+
+</body>
+</html>

@@ -10,11 +10,12 @@ const TRANSLATIONS = {
     nav_login:     'Zaloguj się',
     nav_register:  'Zarejestruj',
     // Footer
-    footer_privacy: 'Polityka prywatności',
-    footer_terms:   'Regulamin',
-    footer_contact: 'Kontakt',
-    footer_cookies: 'Cookies',
-    footer_copy:    '© 2026 Industrverse · Coact Sp. z o.o.',
+    footer_privacy:       'Polityka prywatności',
+    footer_cookie_policy: 'Polityka cookies',
+    footer_terms:         'Regulamin',
+    footer_contact:       'Kontakt',
+    footer_cookies:       'Zarządzaj cookies',
+    footer_copy:          '© 2026 Industrverse · Coact Sp. z o.o.',
     // CTA form
     cta_placeholder: 'Twój e-mail służbowy...',
     cta_success:   '✓ Gotowe! Skontaktujemy się wkrótce.',
@@ -217,11 +218,12 @@ const TRANSLATIONS = {
     nav_login:     'Log in',
     nav_register:  'Sign up',
     // Footer
-    footer_privacy: 'Privacy Policy',
-    footer_terms:   'Terms of Service',
-    footer_contact: 'Contact',
-    footer_cookies: 'Cookies',
-    footer_copy:    '© 2026 Industrverse · Coact Sp. z o.o.',
+    footer_privacy:       'Privacy Policy',
+    footer_cookie_policy: 'Cookie Policy',
+    footer_terms:         'Terms of Service',
+    footer_contact:       'Contact',
+    footer_cookies:       'Manage cookies',
+    footer_copy:          '© 2026 Industrverse · Coact Sp. z o.o.',
     // CTA form
     cta_placeholder: 'Your work email...',
     cta_success:   '✓ Done! We will reach out soon.',
@@ -420,7 +422,7 @@ const TRANSLATIONS = {
   },
 };
 
-let currentLang = localStorage.getItem('iv_lang') || 'pl';
+let currentLang = localStorage.getItem('iv_lang') || null;
 
 function applyLang(lang) {
   currentLang = lang;
