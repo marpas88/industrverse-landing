@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finansowanie — Industrverse</title>
+  <meta name="description" content="Dowiedz się, jak sfinansować wdrożenie platformy Industrverse ze środków programu Cyfrowy Uczeń. Skontaktuj się z nami, żeby ustalić szczegóły.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="shortcut icon" href="img/favicon.svg">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/cta.css">
+  <link rel="stylesheet" href="css/cookies.css">
+
+  <style>
+    /* ── Layout ── */
+    .fin-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 100px 24px 80px;
+    }
+
+    /* ── Hero ── */
+    .fin-hero {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 64px;
+    }
+    .fin-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(74, 222, 128, 0.12);
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 999px;
+      width: fit-content;
+    }
+    .fin-hero h1 {
+      font-size: clamp(30px, 5vw, 48px);
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+    .fin-hero h1 em {
+      font-style: normal;
+      color: var(--green);
+    }
+    .fin-hero p.lead {
+      font-size: 17px;
+      color: var(--text-2);
+      line-height: 1.7;
+      max-width: 640px;
+    }
+    .fin-hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+    .btn-fin-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: var(--green);
+      color: #000;
+      font-size: 15px;
+      font-weight: 700;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn-fin-primary:hover { opacity: 0.88; }
+    .btn-fin-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: transparent;
+      color: var(--text-2);
+      font-size: 15px;
+      font-weight: 600;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn-fin-secondary:hover { border-color: rgba(255,255,255,0.28); color: var(--text); }
+
+    /* ── Program card ── */
+    .prog-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 48px;
+    }
+    .prog-card-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 32px 32px 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .prog-icon {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      background: rgba(74, 222, 128, 0.1);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green);
+    }
+    .prog-icon .material-icons-outlined { font-size: 28px; }
+    .prog-card-header h2 {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+    .prog-card-header p {
+      font-size: 14px;
+      color: var(--text-3);
+      line-height: 1.5;
+    }
+    .prog-card-header .gov-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 13px;
+      color: var(--green);
+      text-decoration: none;
+      margin-top: 6px;
+    }
+    .prog-card-header .gov-link:hover { text-decoration: underline; }
+
+    .prog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0;
+    }
+    .prog-cell {
+      padding: 24px 32px;
+      border-right: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .prog-cell:last-child { border-right: none; }
+    .prog-cell-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      margin-bottom: 8px;
+    }
+    .prog-cell-value {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+    }
+    .prog-cell-value.accent { color: var(--green); font-size: 22px; font-weight: 800; }
+    .prog-cell-value.warn { color: #FB923C; }
+
+    /* ── Sections ── */
+    .fin-section {
+      margin-bottom: 48px;
+    }
+    .fin-section h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .fin-section h2 .material-icons-outlined {
+      font-size: 22px;
+      color: var(--green);
+    }
+    .fin-section p {
+      font-size: 15px;
+      color: var(--text-2);
+      line-height: 1.75;
+    }
+
+    /* ── Feature list ── */
+    .feat-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .feat-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 20px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+    }
+    .feat-item .material-icons-outlined {
+      font-size: 20px;
+      color: var(--green);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .feat-item-text strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+    .feat-item-text span {
+      font-size: 13px;
+      color: var(--text-3);
+      line-height: 1.5;
+    }
+
+    /* ── Steps ── */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+    }
+    .steps::before {
+      content: '';
+      position: absolute;
+      left: 19px;
+      top: 28px;
+      bottom: 28px;
+      width: 2px;
+      background: rgba(255,255,255,0.06);
+    }
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 16px 0;
+      position: relative;
+    }
+    .step-num {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(74,222,128,0.1);
+      border: 1px solid rgba(74,222,128,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--green);
+      position: relative;
+      z-index: 1;
+    }
+    .step-body strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 4px;
+      padding-top: 8px;
+    }
+    .step-body span {
+      font-size: 13px;
+      color: var(--text-3);
+      line-height: 1.55;
+    }
+
+    /* ── CTA box ── */
+    .fin-cta {
+      background: linear-gradient(135deg, rgba(74,222,128,0.08) 0%, rgba(74,222,128,0.03) 100%);
+      border: 1px solid rgba(74,222,128,0.2);
+      border-radius: 20px;
+      padding: 40px 36px;
+      margin-top: 64px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .fin-cta h2 {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+    }
+    .fin-cta p {
+      font-size: 15px;
+      color: var(--text-2);
+      line-height: 1.7;
+      max-width: 580px;
+    }
+    .fin-cta-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .fin-cta .note {
+      font-size: 12px;
+      color: var(--text-3);
+      margin-top: 4px;
+    }
+
+    /* ── Disclaimer ── */
+    .fin-disclaimer {
+      margin-top: 48px;
+      padding: 20px 24px;
+      background: rgba(255,255,255,0.02);
+      border-radius: 10px;
+      border-left: 3px solid rgba(255,255,255,0.1);
+    }
+    .fin-disclaimer p {
+      font-size: 12.5px;
+      color: var(--text-3);
+      line-height: 1.65;
+    }
+    .fin-disclaimer a { color: var(--green); text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      .fin-wrap { padding: 80px 16px 60px; }
+      .prog-card-header { flex-direction: column; gap: 12px; padding: 20px; }
+      .prog-cell { padding: 16px 20px; }
+      .fin-cta { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <img src="img/logo.png" alt="Industrverse" class="nav-logo-img">
+  </a>
+  <ul role="navigation" aria-label="Menu główne" class="nav-links">
+    <li><a href="/finansowanie" class="active">Finansowanie</a></li>
+    <li><a href="mailto:contact@industrverse.com">Kontakt</a></li>
+  </ul>
+  <div class="nav-actions">
+    <div class="lang-toggle" role="group" aria-label="Język">
+      <button class="lang-btn active" onclick="window.location.href='/finansowanie'">PL</button>
+      <button class="lang-btn" onclick="window.location.href='/financing'">EN</button>
+    </div>
+    <div class="nav-divider" aria-hidden="true"></div>
+    <a href="https://app.industrverse.com/login" class="nav-login">Zaloguj się</a>
+    <a href="https://app.industrverse.com/register" class="btn btn-green btn-sm">
+      <span class="material-icons-outlined">rocket_launch</span>
+      Zarejestruj
+    </a>
+  </div>
+</nav>
+
+<div class="fin-wrap">
+
+  <!-- Hero -->
+  <div class="fin-hero">
+    <span class="fin-badge">
+      <span class="material-icons-outlined" style="font-size:14px">payments</span>
+      Dofinansowanie
+    </span>
+    <h1>Wdróż Industrverse<br><em>z dofinansowaniem</em></h1>
+    <p class="lead">Program <strong>Cyfrowy Uczeń</strong> Ministerstwa Edukacji Narodowej umożliwia szkołom i instytucjom edukacyjnym pozyskanie środków na zakup sprzętu i oprogramowania cyfrowego — w tym platformy Industrverse. Pomożemy Ci przejść przez cały proces.</p>
+    <div class="fin-hero-actions">
+      <a href="mailto:contact@industrverse.com?subject=Cyfrowy%20Uczeń%20—%20zapytanie%20o%20dofinansowanie" class="btn-fin-primary">
+        <span class="material-icons-outlined" style="font-size:18px">mail_outline</span>
+        Zapytaj o szczegóły
+      </a>
+      <a href="https://www.gov.pl/web/edukacja/cyfrowy-uczen" target="_blank" rel="noopener" class="btn-fin-secondary">
+        <span class="material-icons-outlined" style="font-size:16px">open_in_new</span>
+        Strona programu
+      </a>
+    </div>
+  </div>
+
+  <!-- Program card -->
+  <div class="prog-card">
+    <div class="prog-card-header">
+      <div class="prog-icon">
+        <span class="material-icons-outlined">school</span>
+      </div>
+      <div>
+        <h2>Cyfrowy Uczeń</h2>
+        <p>Program Ministerstwa Edukacji Narodowej · uchwała Rady Ministrów nr 121 z 18 września 2025 r.</p>
+        <a href="https://www.gov.pl/web/edukacja/cyfrowy-uczen" target="_blank" rel="noopener" class="gov-link">
+          <span class="material-icons-outlined" style="font-size:14px">open_in_new</span>
+          gov.pl/web/edukacja/cyfrowy-uczen
+        </a>
+      </div>
+    </div>
+    <div class="prog-grid">
+      <div class="prog-cell">
+        <div class="prog-cell-label">Okres programu</div>
+        <div class="prog-cell-value">2025 – 2029</div>
+      </div>
+      <div class="prog-cell">
+        <div class="prog-cell-label">Wkład własny</div>
+        <div class="prog-cell-value">min. 20%</div>
+      </div>
+      <div class="prog-cell">
+        <div class="prog-cell-label">Termin składania wniosków</div>
+        <div class="prog-cell-value warn">15 maja 2026</div>
+      </div>
+      <div class="prog-cell">
+        <div class="prog-cell-label">Dla kogo</div>
+        <div class="prog-cell-value">Szkoły, przedszkola,<br>placówki oświatowe</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Co finansuje -->
+  <div class="fin-section">
+    <h2>
+      <span class="material-icons-outlined">check_circle</span>
+      Co obejmuje dofinansowanie
+    </h2>
+    <div class="feat-list">
+      <div class="feat-item">
+        <span class="material-icons-outlined">devices</span>
+        <div class="feat-item-text">
+          <strong>Sprzęt komputerowy</strong>
+          <span>Laptopy, tablety, komputery stacjonarne, terminale — dla uczniów i nauczycieli.</span>
+        </div>
+      </div>
+      <div class="feat-item">
+        <span class="material-icons-outlined">integration_instructions</span>
+        <div class="feat-item-text">
+          <strong>Oprogramowanie specjalistyczne</strong>
+          <span>Licencje na platformy edukacyjne, w tym narzędzia do szkoleń VR/AR i symulatorów zawodowych.</span>
+        </div>
+      </div>
+      <div class="feat-item">
+        <span class="material-icons-outlined">menu_book</span>
+        <div class="feat-item-text">
+          <strong>Cyfrowe materiały edukacyjne</strong>
+          <span>Zasoby dydaktyczne dostępne cyfrowo, programy kształcenia opartego na technologii.</span>
+        </div>
+      </div>
+      <div class="feat-item">
+        <span class="material-icons-outlined">vrpano</span>
+        <div class="feat-item-text">
+          <strong>Industrverse — platforma VR/AR</strong>
+          <span>Szkolenia zawodowe w wirtualnej rzeczywistości wpisują się wprost w cele cyfrowej transformacji edukacji. Skontaktuj się z nami, żebyśmy pomogli Ci uzasadnić wniosek.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kto może skorzystać -->
+  <div class="fin-section">
+    <h2>
+      <span class="material-icons-outlined">group</span>
+      Kto może złożyć wniosek
+    </h2>
+    <div class="feat-list">
+      <div class="feat-item">
+        <span class="material-icons-outlined">domain</span>
+        <div class="feat-item-text">
+          <strong>Szkoły podstawowe i ponadpodstawowe</strong>
+          <span>Publiczne i niepubliczne, zarządzane przez organ prowadzący.</span>
+        </div>
+      </div>
+      <div class="feat-item">
+        <span class="material-icons-outlined">child_care</span>
+        <div class="feat-item-text">
+          <strong>Przedszkola</strong>
+          <span>Dofinansowanie na sprzęt do użytku nauczycielskiego lub na potrzeby uczniów ze specjalnymi potrzebami.</span>
+        </div>
+      </div>
+      <div class="feat-item">
+        <span class="material-icons-outlined">account_balance</span>
+        <div class="feat-item-text">
+          <strong>Placówki specjalne i poradnie</strong>
+          <span>Centra kształcenia zawodowego, placówki specjalne, poradnie psychologiczno-pedagogiczne.</span>
+        </div>
+      </div>
+      <div class="feat-item">
+        <span class="material-icons-outlined">public</span>
+        <div class="feat-item-text">
+          <strong>Polskie szkoły za granicą</strong>
+          <span>Placówki ORPEG i szkoły nadzorowane przez ministra edukacji.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Jak przebiega proces -->
+  <div class="fin-section">
+    <h2>
+      <span class="material-icons-outlined">route</span>
+      Jak przebiega proces
+    </h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <strong>Skontaktuj się z nami</strong>
+          <span>Napisz na contact@industrverse.com — pomożemy ocenić, czy Twoja placówka kwalifikuje się do programu i przygotujemy wycenę wdrożenia.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <strong>Przygotuj wniosek</strong>
+          <span>Dyrektor składa wniosek do organu prowadzącego (formularz C dla szkół). Organ prowadzący wnioskuje o środki do MEN. Pomożemy Ci uzasadnić potrzebę zakupu oprogramowania VR.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <strong>Otrzymaj decyzję i środki</strong>
+          <span>Po zatwierdzeniu organ prowadzący przekazuje środki placówce. Każda placówka może skorzystać z programu jednokrotnie w jego trwaniu (2025–2028).</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <strong>Wdróż Industrverse</strong>
+          <span>Przeprowadzimy wdrożenie, szkolenie dla nauczycieli i pełne wsparcie techniczne. Uczniowie zyskują dostęp do szkoleń zawodowych w VR i AR.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="fin-cta">
+    <h2>Masz pytania? Pomożemy<br>przejść przez cały proces.</h2>
+    <p>Nasz zespół zna wymagania programu Cyfrowy Uczeń i pomoże Ci przygotować dokumentację, wycenę oraz uzasadnienie wniosku. Termin składania wniosków upływa <strong style="color: #FB923C">15 maja 2026 r.</strong> — nie czekaj.</p>
+    <div class="fin-cta-actions">
+      <a href="mailto:contact@industrverse.com?subject=Cyfrowy%20Uczeń%20—%20zapytanie%20o%20dofinansowanie" class="btn-fin-primary">
+        <span class="material-icons-outlined" style="font-size:18px">mail_outline</span>
+        Napisz do nas
+      </a>
+      <a href="tel:+48222500120" class="btn-fin-secondary" style="display:none" id="tel-btn">
+        <span class="material-icons-outlined" style="font-size:16px">phone</span>
+        Zadzwoń
+      </a>
+    </div>
+    <p class="note">Odpowiadamy w ciągu jednego dnia roboczego · contact@industrverse.com</p>
+  </div>
+
+  <!-- Disclaimer -->
+  <div class="fin-disclaimer">
+    <p>Informacje na tej stronie opierają się na uchwale Rady Ministrów nr 121 z 18 września 2025 r. oraz materiałach dostępnych na <a href="https://www.gov.pl/web/edukacja/cyfrowy-uczen" target="_blank" rel="noopener">gov.pl</a>. Szczegółowe warunki, formularze i aktualne terminy dostępne są wyłącznie na oficjalnych stronach MEN. Industrverse nie jest powiązany z Ministerstwem Edukacji Narodowej. Industrverse sp. z o.o. świadczy usługi komercyjne, które mogą być finansowane ze środków programu.</p>
+  </div>
+
+</div>
+
+<footer role="contentinfo">
+  <a href="/" class="f-logo">
+    <img src="img/logo.png" alt="Industrverse" class="f-logo-img">
+  </a>
+  <p class="f-copy">© 2026 Industrverse · Coact Sp. z o.o.</p>
+  <div class="f-links">
+    <a href="/polityka-prywatnosci">Polityka prywatności</a>
+    <a href="/polityka-cookies">Polityka cookies</a>
+    <a href="/regulamin">Regulamin</a>
+    <a href="mailto:contact@industrverse.com">Kontakt</a>
+    <button id="cookie-manage" class="cookie-manage-btn">Zarządzaj cookies</button>
+  </div>
+</footer>
+
+<!-- ── Cookie banner ── -->
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Powiadomienie o cookies" hidden>
+  <div class="cookie-banner-inner">
+    <div class="cookie-banner-text">
+      <p>Używamy cookies do analizy ruchu i poprawy działania strony. <a href="/polityka-cookies" class="cookie-link">Dowiedz się więcej</a></p>
+    </div>
+    <div class="cookie-banner-actions">
+      <button id="cookie-decline"  class="cookie-btn cookie-btn-ghost">Odrzuć</button>
+      <button id="cookie-settings" class="cookie-btn cookie-btn-outline">Ustawienia</button>
+      <button id="cookie-accept"   class="cookie-btn cookie-btn-primary">Akceptuj wszystkie</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Cookie modal ── -->
+<div id="cookie-modal" class="cookie-modal" role="dialog" aria-modal="true" aria-label="Ustawienia cookies" hidden>
+  <div class="cookie-modal-backdrop"></div>
+  <div class="cookie-modal-dialog">
+    <div class="cookie-modal-header">
+      <span class="cookie-modal-title">Ustawienia cookies</span>
+      <button id="cookie-modal-close" class="cookie-modal-close" aria-label="Zamknij">✕</button>
+    </div>
+    <div class="cookie-modal-body">
+      <p class="cookie-modal-intro">Wybierz, które cookies akceptujesz. Cookies niezbędne zawsze są aktywne. <a href="/polityka-cookies" class="cookie-link">Polityka cookies</a></p>
+      <div class="cookie-category">
+        <div class="cookie-category-header">
+          <div class="cookie-category-meta">
+            <span class="cookie-category-name">Niezbędne</span>
+            <span class="cookie-category-badge">Zawsze aktywne</span>
+          </div>
+          <div class="cookie-toggle cookie-toggle--disabled" role="switch" aria-checked="true" aria-disabled="true">
+            <span class="cookie-toggle-track"></span>
+            <span class="cookie-toggle-thumb"></span>
+          </div>
+        </div>
+        <p class="cookie-category-desc">Wymagane do działania strony: sesja, bezpieczeństwo, preferencje języka.</p>
+      </div>
+      <div class="cookie-category">
+        <div class="cookie-category-header">
+          <div class="cookie-category-meta">
+            <span class="cookie-category-name">Analityczne</span>
+          </div>
+          <label class="cookie-toggle">
+            <input type="checkbox" id="consent-analytics" class="cookie-toggle-input">
+            <span class="cookie-toggle-track"></span>
+            <span class="cookie-toggle-thumb"></span>
+          </label>
+        </div>
+        <p class="cookie-category-desc">Pomagają nam zrozumieć, jak odwiedzasz stronę (Vercel Analytics). Dane są anonimowe.</p>
+      </div>
+    </div>
+    <div class="cookie-modal-footer">
+      <button id="cookie-save"       class="cookie-btn cookie-btn-primary">Zapisz ustawienia</button>
+      <button id="cookie-accept-all" class="cookie-btn cookie-btn-ghost">Akceptuj wszystkie</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

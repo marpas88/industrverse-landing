@@ -6,6 +6,7 @@
 const TRANSLATIONS = {
   pl: {
     // Nav
+    nav_financing: 'Finansowanie',
     nav_contact:   'Kontakt',
     nav_login:     'Zaloguj się',
     nav_register:  'Zarejestruj',
@@ -214,6 +215,7 @@ const TRANSLATIONS = {
   },
   en: {
     // Nav
+    nav_financing: 'Financing',
     nav_contact:   'Contact',
     nav_login:     'Log in',
     nav_register:  'Sign up',
